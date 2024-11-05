@@ -1,0 +1,11 @@
+# Utilizando a imagem oficial do Python
+FROM python:3.9
+
+# Copiar o código do servidor para o container
+COPY server.py /server.py
+
+# Expor a porta necessária
+EXPOSE 8080
+
+# Comando para rodar o servidor HTTP
+CMD ["python", "/server.py"]

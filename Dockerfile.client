@@ -1,0 +1,11 @@
+# Utilizando a imagem oficial do Python
+FROM python:3.9
+
+# Instalar a biblioteca requests
+RUN pip install requests
+
+# Copiar o código do cliente para o container
+COPY client.py /client.py
+
+# Comando para rodar o cliente HTTP
+CMD ["python", "/client.py"]
